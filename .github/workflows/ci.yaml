@@ -14,5 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Welcome Steps
-        run: echo "Welcome to CI Pipeline for this Repo"      
+        run: echo "Welcome to CI Pipeline for this Repo" 
+      - name: Checkout Repository
+        uses: actions/checkout@v4  
+      - name: Lint HTML Files
+        run: npx htmlhint "**/*.html"
+      - name: Lint CSS Files
+        run: npx stylelint "**/*.css"           
 

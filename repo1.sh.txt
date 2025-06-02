@@ -19,4 +19,9 @@ git branch -c wf/ci
 git switch wf/ci
 mkdir -p ./.github/workflows
 touch ./.github/workflows/ci.yaml
-
+git add .
+git commit -m "Add ci.yaml"
+ git push origin wf/ci
+touch .htmlhintrc.json .stylelintrc.json
+git add .
+git commit
